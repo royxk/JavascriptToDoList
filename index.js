@@ -24,13 +24,11 @@ function addToDoList() {
   todoList.appendChild(newDiv);
 
   deleteBtn.addEventListener("click", function () {
-    e.stopPropagation();
     newDiv.remove();
   });
 
   newDiv.addEventListener("click", function () {
     newDiv.classList.toggle("done");
-    deleteBtn.classList.toggle("btndone");
   });
 
   inputValue.value = "";
