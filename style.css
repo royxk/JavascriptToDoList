@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
 }
 
 .main {
@@ -9,6 +11,17 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.title {
+  color: green;
+  font-size: 30px;
+}
+
+.inputContainer {
+  padding: 30px;
+  background-color: #8c34eb;
+  border-radius: 30px;
 }
 
 .to-do-list {
@@ -26,9 +39,34 @@
   width: 300px;
   justify-content: space-between;
   align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .done {
   opacity: 0.5;
-  text-decoration: line-through;
+}
+
+.inputStyle {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+}
+
+.btnStyle {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: darkred;
+}
+
+.btndone {
+  text-decoration: none;
 }

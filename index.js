@@ -4,9 +4,16 @@ const inputBtn = document.querySelector("#inputBtn");
 
 function addToDoList() {
   const newValue = inputValue.value;
+
+  if (newValue === "") {
+    alert("Enter Value");
+    return;
+  }
+
   const newDiv = document.createElement("div");
   newDiv.classList.add("listBox");
   const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("deleteBtn");
   const newLi = document.createElement("li");
   newLi.textContent = newValue;
   deleteBtn.textContent = "delete";
@@ -17,11 +24,13 @@ function addToDoList() {
   todoList.appendChild(newDiv);
 
   deleteBtn.addEventListener("click", function () {
+    e.stopPropagation();
     newDiv.remove();
   });
 
-  newLi.addEventListener("click", function () {
-    newLi.classList.toggle("done");
+  newDiv.addEventListener("click", function () {
+    newDiv.classList.toggle("done");
+    deleteBtn.classList.toggle("btndone");
   });
 
   inputValue.value = "";
